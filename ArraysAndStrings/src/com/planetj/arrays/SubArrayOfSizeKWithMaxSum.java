@@ -2,13 +2,13 @@ package com.planetj.arrays;
 
 import java.util.Arrays;
 
-public class MaximumSubArrayOfSizeKWithMaxSum {
+public class SubArrayOfSizeKWithMaxSum {
     public static void main(String[] args) {
 
         int [] arr = {2, 1, 5, 1, 3, 2};
         int k = 3;
 
-        int startIndex = MaximumSubArrayOfSizeKWithMaxSum.findSubArrayWithMaximumSum(k, arr);
+        int startIndex = SubArrayOfSizeKWithMaxSum.findSubArrayWithMaximumSum(k, arr);
         int [] result = new int[k];
 
         for(int i = 0; i < k; i++)
