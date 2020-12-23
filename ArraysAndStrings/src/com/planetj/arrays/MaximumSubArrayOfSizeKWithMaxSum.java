@@ -1,14 +1,19 @@
 package com.planetj.arrays;
 
+import java.util.Arrays;
+
 public class MaximumSubArrayOfSizeKWithMaxSum {
     public static void main(String[] args) {
 
         int [] arr = {2, 1, 5, 1, 3, 2};
         int k = 3;
 
-        int startIndex = MaximumSubArrayOfSizeKWithMaxSum.findSubArrayWithMaximumSum(k , arr);
+        int startIndex = MaximumSubArrayOfSizeKWithMaxSum.findSubArrayWithMaximumSum(k, arr);
+        int [] result = new int[k];
 
-        System.out.println("Sub array of size k with maximum sum : [" + arr[startIndex] + ", " + arr[startIndex+1] + ", " + arr[startIndex+2] + "]");
+        for(int i = 0; i < k; i++)
+            result[i] = arr[startIndex + i];
+        System.out.println(Arrays.toString(result));
     }
 
     private static int findSubArrayWithMaximumSum(int k, int[] arr) {
@@ -27,9 +32,7 @@ public class MaximumSubArrayOfSizeKWithMaxSum {
                 sum -= arr[windowStart];
                 windowStart++;
             }
-
         }
-
         return startIndex;
 
 
